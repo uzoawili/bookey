@@ -3,5 +3,5 @@ from .models import Category, Book
 
 # Register your models here.
 
-admin.register(Category)
-admin.register(Book)
+admin.site.register(Category)
+admin.site.register(Book)

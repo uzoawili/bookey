@@ -1,28 +1,28 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<html>
+{% block main %}
+    <div class="search-bar">
+        <form method="GET" action="">
+            <input type="text" name="q" placeholder="Search for books by name...">
+            <input type="submit">
+        </form>
+    </div>
+    <div class="categories">
+        <h3>Categories</h3>
+        <ul>
+        {% for category in categories %}
+            <li><a href="{% url 'books:home' %}">{{ category.name }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
 
-    <head>
-        <title>Bookey</title>
-    </head>
-
-    <body>
-        <div class="categories">
-            <ul>
-            {% for category in categories %}
-                <li>{{ category.name }}</li>
-            {% endfor %}
-            </ul>
-        </div>
-
-        <div class="books">
-            <ul>
-            {% for book in books %}
-                <li>{{ book.name }}</li>
-            {% endfor %}
-            </ul>
-        </div>
-
-    </body>
-
-</html>
+    <div class="books">
+        <h3>Books</h3>
+        <ul>
+        {% for book in books %}
+            <li>{{ book.name }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

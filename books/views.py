@@ -7,12 +7,14 @@ class HomeView(View):
     """
     XXX
     """
-
     def get(self, request, *args, **kwargs):
-        """handles get requests to the home route"""
-        # url_params = request.GET
+        """
+        handles get requests to the home route
+        also handles search query param 'q'
+        """
+        q = request.GET.get('q')
+        books = Book.objects.filter(name__icontains=q) if q else Book.objects.all()
         categories = Category.objects.all()
-        books = Book.objects.all()
         context = {
             'categories': categories,
             'books': books
