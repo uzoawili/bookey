@@ -12,7 +12,7 @@
         <h3>Categories</h3>
         <ul>
         {% for category in categories %}
-            <li><a href="{% url 'books:home' %}">{{ category.name }}</a></li>
+            <li><a href="{% url 'books:home' %}?c={{ category.pk }}">{{ category.name }}</a></li>
         {% endfor %}
         </ul>
     </div>
