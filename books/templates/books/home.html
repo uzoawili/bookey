@@ -1,0 +1,28 @@
+{% load static %}
+
+<html>
+
+    <head>
+        <title>Bookey</title>
+    </head>
+
+    <body>
+        <div class="categories">
+            <ul>
+            {% for category in categories %}
+                <li>{{ category.name }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div class="books">
+            <ul>
+            {% for book in books %}
+                <li>{{ book.name }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+
+    </body>
+
+</html>
