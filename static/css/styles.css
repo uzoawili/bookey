@@ -1,0 +1,60 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -1;
+    margin-top: 5px;
+}
+
+.main {
+    margin-top: 70px;
+}
+
+.search-input, .search-submit {
+    width:100%;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.section-header {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.category-list, .books-list {
+    list-style: none outside none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-item {
+    padding: 10px 0;
+    font-size: 14x;
+    text-transform: uppercase;
+}
+
+.book-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.book-item .title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -1;
+}
+
+.book-item .author {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    color: #999;
+    margin-top: -3px;
+}
