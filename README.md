@@ -1,2 +1,2 @@
 # bookey
-Technical Assesment Test :)
+Simple book library management with Django
